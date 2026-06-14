@@ -30,7 +30,12 @@ app.register_blueprint(
 app.register_blueprint(
     report_bp
 )
-
+@app.route("/")
+def home():
+    return {
+        "status": "success",
+        "message": "Student Management Backend Running"
+    }
 # if __name__ == "__main__":
 #     app.run(debug=True)
 

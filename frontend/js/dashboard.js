@@ -1,4 +1,5 @@
-const BASE_URL = "http://127.0.0.1:5000";
+const BASE_URL =
+"https://student-management-backend-qwkd.onrender.com";
 
 // load total students
 fetch(`${BASE_URL}/dashboard/total-students`)
@@ -66,28 +67,7 @@ fetch(`${BASE_URL}/dashboard/attendance-summary`)
     );
 
 });
-// load top performers
-// fetch(`${BASE_URL}/dashboard/top-performers`)
-// .then(res => res.json())
-// .then(data => {
 
-//     let rows = "";
-
-//     data.forEach(student => {
-
-//         rows += `
-//         <tr>
-//             <td>${student.id}</td>
-//             <td>${student.name}</td>
-//             <td>${student.average_marks}</td>
-//         </tr>
-//         `;
-//     });
-
-//     document.getElementById(
-//         "performersTable"
-//     ).innerHTML = rows;
-// });
 fetch(`${BASE_URL}/dashboard/top-performers`)
 .then(res => res.json())
 .then(data => {

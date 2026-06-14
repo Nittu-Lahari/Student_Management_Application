@@ -1,3 +1,6 @@
+const BASE_URL =
+"https://student-management-backend-qwkd.onrender.com";
+
 const user = JSON.parse(
 localStorage.getItem("user")
 );
@@ -54,7 +57,7 @@ user.id;
 // ======================
 
 fetch(
-`http://127.0.0.1:5000/student/profile/${studentId}`
+`${BASE_URL}/student/profile/${studentId}`
 )
 .then(response => response.json())
 .then(student => {
@@ -82,7 +85,7 @@ student.section || "-";
 // ======================
 
 fetch(
-`http://127.0.0.1:5000/student/attendance/${studentId}`
+`${BASE_URL}/student/attendance/${studentId}`
 )
 .then(response => response.json())
 .then(data => {
@@ -105,7 +108,7 @@ console.error(error);
 // ======================
 
 fetch(
-`http://127.0.0.1:5000/student/marks/${studentId}`
+`${BASE_URL}/student/marks/${studentId}`
 )
 .then(response => response.json())
 .then(data => {
@@ -233,7 +236,7 @@ function openPasswordSettings(){
 
 
 fetch(
-`http://127.0.0.1:5000/student/prediction/${studentId}`
+`${BASE_URL}/student/prediction/${studentId}`
 )
 .then(response => response.json())
 .then(data => {

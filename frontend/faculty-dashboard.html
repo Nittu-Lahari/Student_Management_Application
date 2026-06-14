@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Student Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script src="js/auth.js"></script>
+</head>
+<body>
+    <nav>
+        <!-- <div class="logo">
+        <i class="fas fa-chalkboard-teacher"></i>
+        Faculty Portal
+    </div> -->
+    <!-- <a href="#"><i class="fas fa-chalkboard-teacher"></i>
+         Faculty Portal 
+    </a> -->
+    <a href="index.html"><i class="fas fa-home"></i>Dashboard</a>
+    <a href="students.html"><i class="fas fa-users"></i>Students</a>
+    <a href="attendance.html"><i class="fas fa-calendar-check"></i>Attendance</a>
+    <a href="marks.html"><i class="fas fa-clipboard-list"></i>Marks</a>
+    <a href="prediction.html"><i class="fas fa-chart-line"></i>Prediction</a>
+    <a href="report.html"><i class="fas fa-file-alt"></i>AI Report</a>
+    <div class="nav-right">
+
+    <button class="logout-btn" onclick="logout()">
+
+        <i class="fas fa-sign-out-alt"></i>
+
+        <span>Logout</span>
+
+    </button>
+
+    <a href="faculty-profile.html" class="profile-nav">
+
+        <i class="fas fa-user-circle"></i>
+
+        <span id="facultyName">
+            Faculty
+        </span>
+
+    </a>
+
+</div>
+    </nav>
+    <h1>
+    Faculty Dashboard
+</h1>
+
+<p class="page-subtitle">
+    Monitor student performance, attendance and AI insights.
+</p>
+    <div class="dashboard">
+
+        <div class="card">
+            <h2>Total Students</h2>
+            <p id="totalStudents">0</p>
+        </div>
+
+        <div class="card">
+            <h2>Average Marks</h2>
+            <p id="averageMarks">0</p>
+        </div>
+
+        <div class="card">
+            <h2>Attendance Rate</h2>
+            <p id="attendanceRate">0%</p>
+        </div>
+
+    </div>
+    <div class="charts-container">
+
+        <div class="chart-card">
+            <h2>Attendance Overview</h2>
+            <div class="attendance-chart-wrapper">
+                <canvas id="attendanceChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <h2>Top Performers</h2>
+            <canvas id="topPerformersChart"></canvas>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

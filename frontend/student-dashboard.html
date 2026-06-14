@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script src="js/auth.js"></script>
+
+    <script>
+        requireStudent();
+    </script>
+
+</head>
+
+<body>
+
+<nav>
+
+    <a href="student-dashboard.html">
+        <i class="fas fa-chart-line"></i>
+        Dashboard
+    </a>
+    
+    <a href="my-attendance.html">
+        <i class="fas fa-calendar-check"></i>
+        Attendance
+    </a>
+
+    <a href="my-marks.html">
+        <i class="fas fa-graduation-cap"></i>
+        Marks
+    </a>
+
+    <a href="my-prediction.html">
+        <i class="fas fa-brain"></i>
+        Prediction
+    </a>
+
+    <a href="my-report.html">
+        <i class="fas fa-file-alt"></i>
+        AI Report
+    </a>
+
+    <div class="nav-right">
+    <div class="student-profile-menu">
+
+    <div class="profile-nav" onclick="toggleProfileMenu()">
+
+        <i class="fas fa-user-circle"></i>
+
+    </div>
+
+    <div
+    id="studentProfileDropdown"
+    class="student-profile-dropdown">
+
+        <div
+        class="student-profile-info">
+
+            <h4 id="dropdownStudentName">
+                Student
+            </h4>
+
+            <p id="dropdownStudentEmail">
+                Email
+            </p>
+
+        </div>
+
+        <button
+        onclick="openAccountSettings()">
+
+            <i class="fas fa-cog"></i>
+
+            Account Settings
+
+        </button>
+
+        <button
+        onclick="openPasswordSettings()">
+
+            <i class="fas fa-lock"></i>
+
+            Change Password
+
+        </button>
+        <!-- <button onclick="window.location.href='my-profile.html#security'"><i class="fas fa-lock"></i>
+
+            Change Password</button>-->
+        <button 
+        onclick="logout()">
+
+            <i class="fas fa-sign-out-alt"></i>
+
+            Logout
+
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- <h1 id="welcomeText">
+    Welcome Student
+</h1> -->
+
+
+<div class="dashboard-layout">
+
+    <!-- LEFT PROFILE SECTION -->
+
+    <div class="profile-sidebar">
+
+    <div class="profile-top">
+
+        <div class="profile-avatar">
+            <i class="fas fa-user-circle"></i>
+        </div>
+
+        <h2 id="studentName"></h2>
+
+        <p id="studentEmail"></p>
+
+    </div>
+
+    <div class="profile-details">
+
+        <p>
+            <strong>ID:</strong>
+            <span id="studentId"></span>
+        </p>
+
+        <p>
+            <strong>Class:</strong>
+            <span id="studentClass"></span>
+        </p>
+
+        <p>
+            <strong>Section:</strong>
+            <span id="studentSection"></span>
+        </p>
+
+    </div>
+
+    <div class="edit-profile-container">
+
+        <button
+        onclick="window.location.href='my-profile.html'">
+
+            Edit Profile
+
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- RIGHT DASHBOARD SECTION -->
+
+    <div class="dashboard-content">
+
+    <div class="dashboard-header">
+
+        <h1 id="welcomeText">
+            Welcome Student
+        </h1>
+        <br>
+        <p>
+            Track your academic performance and AI insights.
+        </p>
+        <br>
+        
+    </div>
+
+    <div class="dashboard-cards">
+
+        <div class="card">
+
+            <i class="fas fa-calendar-check"></i>
+
+            <h3>Attendance</h3>
+
+            <h2 id="attendancePercent">
+                --
+            </h2>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fas fa-graduation-cap"></i>
+
+            <h3>Average Marks</h3>
+
+            <h2 id="averageMarks">
+                --
+            </h2>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fas fa-chart-line"></i>
+
+            <h3>Performance Status</h3>
+
+            <h2 id="performanceStatus">
+                --
+            </h2>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fas fa-brain"></i>
+
+            <h3>AI Prediction</h3>
+
+            <h2 id="prediction">
+                --
+            </h2>
+
+        </div>
+
+    </div>
+
+    <div class="ai-insight-card">
+
+        <h3>
+            AI Insight
+        </h3>
+
+        <p id="aiInsight">
+
+            Loading insight...
+
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="js/student-dashboard.js"></script>
+
+</body>
+</html>

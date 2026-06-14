@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Faculty Profile</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script src="js/auth.js"></script>
+
+    <script>
+        requireFaculty();
+    </script>
+
+</head>
+
+<body>
+
+<nav>
+        <!-- <div class="logo">
+        <i class="fas fa-chalkboard-teacher"></i>
+        Faculty Portal
+    </div> -->
+    <a href="index.html"><i class="fas fa-home"></i>Dashboard</a>
+    <a href="students.html"><i class="fas fa-users"></i>Students</a>
+    <a href="attendance.html"><i class="fas fa-calendar-check"></i>Attendance</a>
+    <a href="marks.html"><i class="fas fa-clipboard-list"></i>Marks</a>
+    <a href="prediction.html"><i class="fas fa-chart-line"></i>Prediction</a>
+    <a href="report.html"><i class="fas fa-file-alt"></i>AI Report</a>
+    <div class="nav-right">
+
+    <button class="logout-btn" onclick="logout()">
+
+        <i class="fas fa-sign-out-alt"></i>
+
+        <span>Logout</span>
+
+    </button>
+
+    <a href="faculty-profile.html" class="profile-nav">
+
+        <i class="fas fa-user-circle"></i>
+
+        <span id="navbarFacultyName">
+            Faculty
+        </span>
+
+    </a>
+
+</div>
+    </nav>
+
+<h1>Faculty Profile</h1>
+
+<div class="profile-header">
+
+    <div class="profile-avatar">
+
+        <i class="fas fa-user-circle"></i>
+
+    </div>
+
+    <h2 id="profileHeaderName"></h2>
+
+    <p id="facultyShortInfo"></p>
+
+</div>
+
+<div id="profileView" class="profile-card">
+
+    <div class="profile-card-header">
+
+        <h2>Profile Details</h2>
+
+        <button onclick="showEditForm()">
+
+            <i class="fas fa-edit"></i>
+
+            Edit Profile
+
+        </button>
+
+    </div>
+
+    <div class="profile-row">
+
+        <label>ID</label>
+
+        <span id="viewFacultyId"></span>
+
+    </div>
+
+    <div class="profile-row">
+
+        <label>Name</label>
+
+        <span id="viewFacultyName"></span>
+
+    </div>
+
+    <div class="profile-row">
+
+        <label>Email</label>
+
+        <span id="viewFacultyEmail"></span>
+
+    </div>
+
+    <div class="profile-row">
+
+        <label>Phone</label>
+
+        <span id="viewFacultyPhone"></span>
+
+    </div>
+
+</div>
+
+<div id="profileEditForm"
+     class="profile-card"
+     style="display:none;">
+    <h2>Edit Profile</h2>
+    <div class="profile-row">
+        <label>Name</label>
+        <input type="text"
+               id="editFacultyName">
+    </div>
+
+    <div class="profile-row">
+
+        <label>Email</label>
+
+        <input type="email"
+               id="facultyEmail"
+               readonly>
+
+    </div>
+
+    <div class="profile-row">
+
+        <label>Phone</label>
+
+        <input type="text"
+               id="facultyPhone">
+
+    </div>
+
+    <button onclick="updateProfile()">
+
+        Save Changes
+
+    </button>
+
+    <button onclick="cancelEdit()">
+
+        Cancel
+
+    </button>
+
+</div>
+
+<div class="profile-card">
+
+    <div class="profile-card-header">
+
+        <h2>Security</h2>
+
+        <button onclick="showPasswordForm()">
+
+            <i class="fas fa-lock"></i>
+
+            Change Password
+
+        </button>
+
+    </div>
+
+    <div id="passwordForm"
+         style="display:none;">
+
+        <input type="password"
+               id="currentPassword"
+               placeholder="Current Password">
+
+        <input type="password"
+               id="newPassword"
+               placeholder="New Password">
+
+        <input type="password"
+               id="confirmPassword"
+               placeholder="Confirm Password">
+
+        <button onclick="changePassword()">
+
+            Update Password
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/faculty-profile.js"></script>
+
+</body>
+</html>

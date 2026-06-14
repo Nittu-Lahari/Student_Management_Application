@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+
+    <div class="auth-logo">
+        <i class="fas fa-user-graduate"></i>
+    </div>
+
+    <h2>Student Management System</h2>
+
+    <p class="auth-subtitle">
+        Login to continue
+    </p>
+
+    <select id="role">
+        <option value="" selected disabled>Select Role</option>
+        <option value="faculty">Faculty</option>
+        <option value="student">Student</option>
+    </select>
+
+    <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input
+            type="email"
+            id="email"
+            placeholder="Email Address">
+    </div>
+
+    <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input
+            type="password"
+            id="password"
+            placeholder="Password">
+    </div>
+
+    <button onclick="loginUser()">
+        Login
+    </button>
+
+    <p>
+        Don't have an account?
+        <a href="register.html">Register</a>
+    </p>
+
+</div>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>

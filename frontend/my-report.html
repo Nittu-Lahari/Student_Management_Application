@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>My AI Report</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+href="css/style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script src="js/auth.js"></script>
+
+<script>
+requireStudent();
+</script>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="student-dashboard.html">
+    <i class="fas fa-chart-line"></i>
+    Dashboard
+</a>
+
+<a href="my-attendance.html">
+    <i class="fas fa-calendar-check"></i>
+    Attendance
+</a>
+
+<a href="my-marks.html">
+    <i class="fas fa-graduation-cap"></i>
+    Marks
+</a>
+
+<a href="my-prediction.html">
+    <i class="fas fa-brain"></i>
+    Prediction
+</a>
+
+<a href="my-report.html">
+    <i class="fas fa-file-alt"></i>
+    AI Report
+</a>
+
+<div class="nav-right">
+    <div class="student-profile-menu">
+
+    <div class="profile-nav" onclick="toggleProfileMenu()">
+
+        <i class="fas fa-user-circle"></i>
+
+    </div>
+
+    <div
+    id="studentProfileDropdown"
+    class="student-profile-dropdown">
+
+        <div
+        class="student-profile-info">
+
+            <h4 id="dropdownStudentName">
+                Student
+            </h4>
+
+            <p id="dropdownStudentEmail">
+                Email
+            </p>
+
+        </div>
+
+        <button
+        onclick="openAccountSettings()">
+
+            <i class="fas fa-cog"></i>
+
+            Account Settings
+
+        </button>
+
+        <button
+        onclick="openPasswordSettings()">
+
+            <i class="fas fa-lock"></i>
+
+            Change Password
+
+        </button>
+        <!-- <button onclick="window.location.href='my-profile.html#security'"><i class="fas fa-lock"></i>
+
+            Change Password</button>-->
+        <button 
+        onclick="logout()">
+
+            <i class="fas fa-sign-out-alt"></i>
+
+            Logout
+
+        </button>
+
+    </div>
+
+</div>
+
+</nav>
+
+<h1>My AI Report</h1>
+
+<div
+id="reportContainer"
+class="profile-card">
+
+</div>
+
+<script src="js/my-report.js"></script>
+<script src="js/student-common.js"></script>
+
+</body>
+</html>

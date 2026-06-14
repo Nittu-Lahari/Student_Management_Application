@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>My Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="css/style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script src="js/auth.js"></script>
+
+    <script>
+        requireStudent();
+    </script>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="student-dashboard.html">
+    <i class="fas fa-chart-line"></i>
+    Dashboard
+</a>
+
+<a href="my-attendance.html">
+    <i class="fas fa-calendar-check"></i>
+    Attendance
+</a>
+
+<a href="my-marks.html">
+    <i class="fas fa-graduation-cap"></i>
+    Marks
+</a>
+
+<a href="my-prediction.html">
+    <i class="fas fa-brain"></i>
+    Prediction
+</a>
+
+<a href="my-report.html">
+    <i class="fas fa-file-alt"></i>
+    AI Report
+</a>
+
+<div class="nav-right">
+    <div class="student-profile-menu">
+
+    <div class="profile-nav" onclick="toggleProfileMenu()">
+
+        <i class="fas fa-user-circle"></i>
+
+    </div>
+
+    <div
+    id="studentProfileDropdown"
+    class="student-profile-dropdown">
+
+        <div
+        class="student-profile-info">
+
+            <h4 id="dropdownStudentName">
+                Student
+            </h4>
+
+            <p id="dropdownStudentEmail">
+                Email
+            </p>
+
+        </div>
+
+        <button
+        onclick="openAccountSettings()">
+
+            <i class="fas fa-cog"></i>
+
+            Account Settings
+
+        </button>
+
+        <button
+        onclick="openPasswordSettings()">
+
+            <i class="fas fa-lock"></i>
+
+            Change Password
+
+        </button>
+        <!-- <button onclick="window.location.href='my-profile.html#security'"><i class="fas fa-lock"></i>
+
+            Change Password</button>-->
+        <button 
+        onclick="logout()">
+
+            <i class="fas fa-sign-out-alt"></i>
+
+            Logout
+
+        </button>
+
+    </div>
+
+</div>
+
+</nav>
+
+<!-- <h1>My Performance Prediction</h1>
+
+<div class="prediction-card">
+
+    <h2>
+        Attendance Percentage
+    </h2>
+
+    <h1 id="attendancePercentage">
+        0%
+    </h1>
+
+    <h2>
+        Average Marks
+    </h2>
+
+    <h1 id="averageMarks">
+        0
+    </h1>
+
+    <h2>
+        Prediction
+    </h2>
+
+    <h1 id="predictionResult">
+        --
+    </h1>
+
+</div> -->
+<div class="prediction-card">
+
+    <div class="prediction-title">
+        <i class="fas fa-brain"></i>
+        <h2>AI Performance Prediction</h2>
+    </div>
+
+    <div class="prediction-stats">
+
+        <div class="prediction-stat">
+
+            <i class="fas fa-calendar-check"></i>
+
+            <h4>Attendance</h4>
+
+            <span id="attendancePercentage">
+                0%
+            </span>
+
+        </div>
+
+        <div class="prediction-stat">
+
+            <i class="fas fa-graduation-cap"></i>
+
+            <h4>Average Marks</h4>
+
+            <span id="averageMarks">
+                0
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="prediction-result-section">
+
+        <i class="fas fa-robot"></i>
+
+        <h4>AI Prediction</h4>
+
+        <h1 id="predictionResult">
+            --
+        </h1>
+
+    </div>
+
+    <div class="prediction-footer">
+
+        <p>
+            <strong>Performance Score:</strong>
+            <span id="performanceScore">--</span>
+        </p>
+
+        <p>
+            <strong>Trend:</strong>
+            <span id="academicTrend">--</span>
+        </p>
+
+    </div>
+
+</div>
+<script src="js/my-prediction.js"></script>
+<script src="js/student-common.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        Account Settings
+    </title>
+
+    <meta charset="UTF-8">
+
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/account-settings.css">
+
+</head>
+
+<body>
+
+<div class="settings-page">
+
+    <div class="settings-header">
+
+        <h1>
+            Account Settings
+        </h1>
+
+        <p>
+            Manage your personal information and security settings.
+        </p>
+
+    </div>
+
+    <div
+    id="profileSection"
+    class="settings-card">
+
+        <h2>
+            Personal Information
+        </h2>
+
+        <label>
+            Full Name
+        </label>
+
+        <input
+        class="settings-input"
+        type="text"
+        id="studentName">
+
+        <label>
+            Phone Number
+        </label>
+
+        <input
+        class="settings-input"
+        type="text"
+        id="studentPhone">
+
+        <label>
+            Class
+        </label>
+
+        <input
+        class="settings-input"
+        type="text"
+        id="studentClass">
+
+        <label>
+            Section
+        </label>
+
+        <input
+        class="settings-input"
+        type="text"
+        id="studentSection">
+
+        <button
+        class="settings-btn"
+        onclick="updateProfile()">
+
+            Save Changes
+
+        </button>
+
+    </div>
+
+    <div
+    id="passwordSection"
+    class="settings-card"
+    style="display:none;">
+
+        <h2>
+            Change Password
+        </h2>
+
+        <label>
+            Current Password
+        </label>
+
+        <input
+        class="settings-input"
+        type="password"
+        id="currentPassword">
+
+        <label>
+            New Password
+        </label>
+
+        <input
+        class="settings-input"
+        type="password"
+        id="newPassword">
+
+        <label>
+            Confirm Password
+        </label>
+
+        <input
+        class="settings-input"
+        type="password"
+        id="confirmPassword">
+
+        <button
+        class="settings-btn"
+        onclick="changePassword()">
+
+            Update Password
+
+        </button>
+
+    </div>
+
+</div>
+<script src="js/account-settings.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    linear-gradient(
+        135deg,
+        #e5ebf5,
+        #d0ddf4
+    );
+    padding:20px;
+}
+
+
+.auth-container{
+    width:100%;
+    max-width:450px;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.2);
+    animation:fadeIn 0.5s ease;
+}
+
+.auth-logo{
+    font-size:60px;
+    color:#1976d2;
+    margin-bottom:15px;
+}
+
+.auth-container h2{
+    color:#1e3c72;
+    margin-bottom:10px;
+}
+.auth-subtitle{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.auth-container select{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+}
+
+.input-group{
+    position:relative;
+   margin-bottom:15px;
+}
+.input-group i{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#888;
+}
+.input-group input{
+    width:100%;
+    padding:12px 12px 12px 45px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    transition:0.3s;
+}
+.input-group input:focus{
+    border-color:#1976d2;
+    box-shadow:
+    0 0 8px rgba(25,118,210,0.2);
+}
+
+.auth-container button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:
+    linear-gradient(
+        135deg,
+        #1976d2,
+        #1565c0
+    );
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+.auth-container button:hover{
+    transform:translateY(-2px);
+    box-shadow:
+    0 5px 15px rgba(25,118,210,0.3);
+}
+
+.auth-container p{
+    margin-top:18px;
+    color:#555;
+}
+.auth-container a{
+    color:#1976d2;
+    text-decoration:none;
+    font-weight:600;
+}
+.auth-container a:hover{
+    text-decoration:underline;
+}
+select{
+    color:#555;
+}
+
+select:invalid{
+    color:#888;
+}
+
+option{
+    color:black;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+    .auth-container{
+        padding:25px;
+    }
+    .auth-logo{
+       font-size:50px;
+    }
+}
